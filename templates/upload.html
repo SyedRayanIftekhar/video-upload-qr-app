@@ -2,6 +2,7 @@
 
 {% block content %}
 
+
 <div class="card p-4">
 
 <h3 class="text-center mb-4">
@@ -180,7 +181,69 @@ document.getElementById("stopBtn").onclick = function() {
     document.getElementById("startBtn").disabled = false;
     this.disabled = true;
 }
+<style>
+/* ===========================
+   MOBILE UI OVERRIDES
+   =========================== */
+@media (max-width: 768px) {
+
+    /* Main card */
+    .card {
+        padding: 20px !important;
+        border-radius: 20px;
+    }
+
+    /* Headings */
+    h3 {
+        font-size: 28px !important;
+    }
+
+    h5 {
+        font-size: 22px !important;
+    }
+
+    /* Text & warnings */
+    p {
+        font-size: 18px !important;
+    }
+
+    /* File input */
+    input[type="file"] {
+        font-size: 18px !important;
+        padding: 14px !important;
+    }
+
+    /* Buttons */
+    button {
+        font-size: 20px !important;
+        padding: 14px !important;
+        border-radius: 14px;
+    }
+
+    /* Video previews */
+    video {
+        height: auto;
+        border-radius: 14px;
+    }
+
+    /* Timer */
+    #timerDisplay {
+        font-size: 22px !important;
+    }
+
+    /* Stack upload + record vertically */
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-6 {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+}
+</style>
 
 </script>
 
 {% endblock %}
+

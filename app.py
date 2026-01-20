@@ -81,7 +81,9 @@ def create_customer():
 # ---------- GENERATE QR CODE ----------
 
 def generate_qr(customer_id, unique_code):
-    upload_url = f"http://127.0.0.1:5000/upload/{unique_code}"
+    BASE_URL = "https://video-upload-qr-app.onrender.com"
+    upload_url = f"{BASE_URL}/upload/{unique_code}"
+
 
     img = qrcode.make(upload_url)
 
@@ -200,6 +202,7 @@ def report():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
+
 
 
 

@@ -324,3 +324,65 @@ a:hover {
         font-size: 18px;
     }
 }
+
+/* ================================ */
+/* 📱 BIG MOBILE UI – UPLOAD PAGE */
+/* ================================ */
+
+@media (max-width: 768px) {
+
+    /* Target only upload page */
+    body.upload-page {
+        font-size: 18px;
+    }
+
+    body.upload-page h2 {
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    body.upload-page p {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* Video preview & recorder */
+    body.upload-page video {
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+        margin-top: 15px;
+    }
+
+    /* Upload / Record buttons */
+    body.upload-page button {
+        font-size: 20px;
+        padding: 16px;
+        margin-top: 12px;
+        width: 100%;
+    }
+
+    /* File input */
+    body.upload-page input[type="file"] {
+        font-size: 18px;
+        padding: 14px;
+        width: 100%;
+    }
+
+    /* Countdown text */
+    body.upload-page .countdown {
+        font-size: 26px;
+        font-weight: bold;
+        color: #00ffff;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Note text */
+    body.upload-page .note {
+        font-size: 16px;
+        text-align: center;
+        opacity: 0.85;
+    }
+}

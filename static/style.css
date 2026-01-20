@@ -1,0 +1,225 @@
+/* ---------- GLOBAL ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #050510;
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Neon animated background */
+.neon-bg {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(0,255,255,0.08), transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(255,0,255,0.08), transparent 40%);
+    z-index: -1;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(0,255,255,0.2);
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    color: #00ffff;
+    text-shadow: 0 0 12px #00ffff;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+/* ---------- MAIN CONTAINER ---------- */
+.container {
+    padding: 30px;
+}
+
+/* ---------- HEADINGS ---------- */
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0,255,255,0.6);
+}
+
+/* ---------- CARDS ---------- */
+.card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0,255,255,0.1);
+    backdrop-filter: blur(12px);
+}
+
+/* ---------- TABLE ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: rgba(0,255,255,0.15);
+    color: #00ffff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+tr {
+    background: rgba(255,255,255,0.03);
+}
+
+tr:hover {
+    background: rgba(0,255,255,0.08);
+}
+
+/* ---------- INPUTS ---------- */
+input, select {
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: 1px solid rgba(0,255,255,0.4);
+    border-radius: 8px;
+    padding: 8px;
+    outline: none;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+    background: linear-gradient(135deg, #00ffff, #ff00ff);
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 12px rgba(0,255,255,0.6);
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255,0,255,0.8);
+}
+
+/* ---------- VIDEO ---------- */
+video {
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,255,255,0.4);
+}
+
+/* ---------- STATUS COLORS ---------- */
+.status-submitted {
+    color: #00ff9d;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: #ffaa00;
+    font-weight: bold;
+}
+
+.status-not {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+/* ---------- LINKS ---------- */
+a {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0 0 10px #00ffff;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* ---------- LOGIN PAGE ---------- */
+.login-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-card {
+    width: 360px;
+    padding: 30px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 0 40px rgba(0,255,255,0.25);
+    text-align: center;
+}
+
+.login-card h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px #00ffff;
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-card input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,255,255,0.4);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+}
+
+.login-card button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.login-note {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #aaa;
+}

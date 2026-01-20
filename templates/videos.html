@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Uploaded Videos</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>ID</th>
+        <th>Customer Name</th>
+        <th>Month</th>
+        <th>Video</th>
+    </tr>
+
+    {% for video in videos %}
+    <tr>
+        <td>{{ video[0] }}</td>
+        <td>{{ video[1] }}</td>
+        <td>{{ video[2] }}</td>
+        <td>
+            <video width="300" controls>
+                <source src="{{ url_for('static', filename=video[3].replace('uploads/', '')) }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

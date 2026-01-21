@@ -6,19 +6,19 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #050510;
-    color: #ffffff;
+    background: linear-gradient(180deg, #f8fbff, #eef3ff);
+    color: #0f172a;
     min-height: 100vh;
     overflow-x: hidden;
 }
 
-/* Neon animated background */
+/* Soft gradient background */
 .neon-bg {
     position: fixed;
     inset: 0;
     background:
-        radial-gradient(circle at 20% 20%, rgba(0,255,255,0.08), transparent 40%),
-        radial-gradient(circle at 80% 80%, rgba(255,0,255,0.08), transparent 40%);
+        radial-gradient(circle at 20% 20%, rgba(6,182,212,0.18), transparent 45%),
+        radial-gradient(circle at 80% 80%, rgba(124,58,237,0.18), transparent 45%);
     z-index: -1;
 }
 
@@ -28,29 +28,29 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 16px 32px;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(255,255,255,0.85);
     backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(0,255,255,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
 .logo {
     font-family: 'Orbitron', sans-serif;
     font-size: 20px;
-    color: #00ffff;
-    text-shadow: 0 0 12px #00ffff;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-links a {
     margin-left: 20px;
     text-decoration: none;
-    color: #fff;
+    color: #0f172a;
     font-weight: 500;
     transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: #00ffff;
-    text-shadow: 0 0 10px #00ffff;
+    color: #06b6d4;
 }
 
 /* ---------- MAIN CONTAINER ---------- */
@@ -61,18 +61,20 @@ body {
 /* ---------- HEADINGS ---------- */
 h2 {
     font-family: 'Orbitron', sans-serif;
-    color: #00ffff;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
-    text-shadow: 0 0 10px rgba(0,255,255,0.6);
 }
 
 /* ---------- CARDS ---------- */
 .card {
-    background: rgba(255,255,255,0.05);
+    background: #ffffff;
     border-radius: 14px;
     padding: 20px;
-    box-shadow: 0 0 30px rgba(0,255,255,0.1);
-    backdrop-filter: blur(12px);
+    box-shadow:
+        0 10px 30px rgba(37,99,235,0.12),
+        0 4px 12px rgba(6,182,212,0.08);
 }
 
 /* ---------- TABLE ---------- */
@@ -88,81 +90,88 @@ th, td {
 }
 
 th {
-    background: rgba(0,255,255,0.15);
-    color: #00ffff;
+    background: linear-gradient(90deg, #e0f2fe, #ede9fe);
+    color: #0f172a;
     font-family: 'Orbitron', sans-serif;
 }
 
 tr {
-    background: rgba(255,255,255,0.03);
+    background: #ffffff;
 }
 
 tr:hover {
-    background: rgba(0,255,255,0.08);
+    background: rgba(6,182,212,0.08);
 }
 
 /* ---------- INPUTS ---------- */
 input, select {
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    border: 1px solid rgba(0,255,255,0.4);
+    background: #ffffff;
+    color: #0f172a;
+    border: 1px solid #c7d2fe;
     border-radius: 8px;
     padding: 8px;
     outline: none;
 }
 
 input::placeholder {
-    color: #aaa;
+    color: #94a3b8;
+}
+
+input:focus,
+select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
 }
 
 /* ---------- BUTTONS ---------- */
 button {
-    background: linear-gradient(135deg, #00ffff, #ff00ff);
-    color: #000;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: #ffffff;
     border: none;
     padding: 8px 16px;
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
-    box-shadow: 0 0 12px rgba(0,255,255,0.6);
+    box-shadow: 0 8px 18px rgba(124,58,237,0.35);
 }
 
 button:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255,0,255,0.8);
+    box-shadow: 0 12px 26px rgba(37,99,235,0.45);
 }
 
 /* ---------- VIDEO ---------- */
 video {
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,255,255,0.4);
+    background: #000;
+    box-shadow: 0 0 25px rgba(124,58,237,0.35);
 }
 
 /* ---------- STATUS COLORS ---------- */
 .status-submitted {
-    color: #00ff9d;
+    color: #06b6d4;
     font-weight: bold;
 }
 
 .status-pending {
-    color: #ffaa00;
+    color: #f59e0b;
     font-weight: bold;
 }
 
 .status-not {
-    color: #ff4d4d;
+    color: #ef4444;
     font-weight: bold;
 }
 
 /* ---------- LINKS ---------- */
 a {
-    color: #00ffff;
+    color: #2563eb;
     text-decoration: none;
 }
 
 a:hover {
-    text-shadow: 0 0 10px #00ffff;
+    color: #06b6d4;
 }
 
 /* ---------- MOBILE ---------- */
@@ -185,17 +194,18 @@ a:hover {
     width: 360px;
     padding: 30px;
     border-radius: 18px;
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 0 40px rgba(0,255,255,0.25);
+    background: #ffffff;
+    box-shadow:
+        0 12px 40px rgba(37,99,235,0.25);
     text-align: center;
 }
 
 .login-card h2 {
     font-family: 'Orbitron', sans-serif;
-    color: #00ffff;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
-    text-shadow: 0 0 15px #00ffff;
 }
 
 .login-card form {
@@ -207,9 +217,7 @@ a:hover {
 .login-card input {
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid rgba(0,255,255,0.4);
-    background: rgba(0,0,0,0.6);
-    color: #fff;
+    border: 1px solid #c7d2fe;
 }
 
 .login-card button {
@@ -221,7 +229,7 @@ a:hover {
 .login-note {
     margin-top: 15px;
     font-size: 12px;
-    color: #aaa;
+    color: #64748b;
 }
 
 /* ============================= */
@@ -234,7 +242,6 @@ a:hover {
         font-size: 16px;
     }
 
-    /* Navbar */
     .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -252,25 +259,21 @@ a:hover {
         display: block;
     }
 
-    /* Container */
     .container {
         padding: 20px;
     }
 
-    /* Headings */
     h2 {
         font-size: 24px;
         text-align: center;
     }
 
-    /* Inputs & Selects */
     input, select {
         font-size: 18px;
         padding: 14px;
         width: 100%;
     }
 
-    /* Buttons */
     button {
         font-size: 18px;
         padding: 14px;
@@ -278,18 +281,15 @@ a:hover {
         margin-top: 10px;
     }
 
-    /* Forms spacing */
     form {
         gap: 14px;
     }
 
-    /* Cards */
     .card {
         padding: 22px;
         border-radius: 18px;
     }
 
-    /* Tables */
     table {
         display: block;
         overflow-x: auto;
@@ -301,14 +301,12 @@ a:hover {
         padding: 14px;
     }
 
-    /* Videos */
     video {
         width: 100%;
         max-width: 100%;
         height: auto;
     }
 
-    /* Login Page */
     .login-card {
         width: 100%;
         max-width: 380px;
@@ -319,70 +317,7 @@ a:hover {
         font-size: 26px;
     }
 
-    /* Links */
     a {
         font-size: 18px;
-    }
-}
-
-/* ================================ */
-/* 📱 BIG MOBILE UI – UPLOAD PAGE */
-/* ================================ */
-
-@media (max-width: 768px) {
-
-    /* Target only upload page */
-    body.upload-page {
-        font-size: 18px;
-    }
-
-    body.upload-page h2 {
-        font-size: 28px;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    body.upload-page p {
-        font-size: 18px;
-        text-align: center;
-    }
-
-    /* Video preview & recorder */
-    body.upload-page video {
-        width: 100%;
-        height: auto;
-        border-radius: 16px;
-        margin-top: 15px;
-    }
-
-    /* Upload / Record buttons */
-    body.upload-page button {
-        font-size: 20px;
-        padding: 16px;
-        margin-top: 12px;
-        width: 100%;
-    }
-
-    /* File input */
-    body.upload-page input[type="file"] {
-        font-size: 18px;
-        padding: 14px;
-        width: 100%;
-    }
-
-    /* Countdown text */
-    body.upload-page .countdown {
-        font-size: 26px;
-        font-weight: bold;
-        color: #00ffff;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    /* Note text */
-    body.upload-page .note {
-        font-size: 16px;
-        text-align: center;
-        opacity: 0.85;
     }
 }

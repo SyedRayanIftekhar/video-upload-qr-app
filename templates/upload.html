@@ -2,6 +2,59 @@
 
 {% block content %}
 
+<style>
+/* ---------- DEFAULT (DESKTOP) ---------- */
+video {
+    border-radius: 12px;
+}
+
+/* ---------- MOBILE OPTIMIZATION ---------- */
+@media (max-width: 768px) {
+
+    h3 {
+        font-size: 26px;
+    }
+
+    h5 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .card {
+        padding: 20px !important;
+        margin-bottom: 20px;
+    }
+
+    input[type="file"] {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    button {
+        font-size: 20px !important;
+        padding: 14px !important;
+        border-radius: 12px;
+    }
+
+    #timerDisplay {
+        font-size: 22px !important;
+    }
+
+    video {
+        height: auto;
+        max-height: 320px;
+    }
+
+    .row {
+        gap: 20px;
+    }
+}
+</style>
+
+
 <div class="card p-4">
 
 <h3 class="text-center mb-4">
@@ -184,3 +237,4 @@ document.getElementById("stopBtn").onclick = function() {
 </script>
 
 {% endblock %}
+

@@ -39,9 +39,21 @@
 
             <!-- SAME LINK AS QR -->
             <td>
-                <a href="/upload/{{ customer[2] }}" target="_blank">
-                    {{ customer[2] }}
-                </a>
+                <div style="display:flex; align-items:center; gap:8px; max-width:320px;">
+                    
+                    <a href="{{ customer[2] }}"
+                       target="_blank"
+                       style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:220px;">
+                        {{ customer[2] }}
+                    </a>
+            
+                    <button type="button"
+                            onclick="copyLink('{{ customer[2] }}')"
+                            style="padding:4px 8px; font-size:12px;">
+                        Copy
+                    </button>
+            
+                </div>
             </td>
 
             <!-- VIEW VIDEOS -->
@@ -64,4 +76,5 @@
 </table>
 
 {% endblock %}
+
 

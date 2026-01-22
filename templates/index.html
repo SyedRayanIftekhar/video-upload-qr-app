@@ -74,8 +74,18 @@
         {% endfor %}
     </tbody>
 </table>
+<script>
+function copyLink(link) {
+    navigator.clipboard.writeText(link).then(() => {
+        alert("Link copied to clipboard!");
+    }).catch(() => {
+        alert("Failed to copy link");
+    });
+}
+</script>
 
 {% endblock %}
+
 
 
 

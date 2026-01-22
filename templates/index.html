@@ -48,7 +48,7 @@
                     </a>
             
                     <button type="button"
-                            onclick="copyLink(href="/upload/{{ customer[2] }}")"
+                            onclick="copyLink('/upload/{{ customer[2] }}')"
                             style="padding:4px 8px; font-size:12px;">
                         Copy
                     </button>
@@ -75,12 +75,16 @@
     </tbody>
 </table>
 <script>
-function copyLink(link) {
-    navigator.clipboard.writeText(link).then(() => {
-        alert("Link copied to clipboard!");
-    }).catch(() => {
-        alert("Failed to copy link");
-    });
+function copyLink(path) {
+    const fullUrl = window.location.origin + path;
+
+    navigator.clipboard.writeText(fullUrl)
+        .then(() => {
+            alert("Link copied to clipboard!");
+        })
+        .catch(() => {
+            alert("Failed to copy link");
+        });
 }
 </script>
 
